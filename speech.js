@@ -74,7 +74,7 @@ function runSpeechRecognition() {
 		}
 		else
 		{
-			output.innerHTML = " " + transcript;
+			output.innerHTML = preTalk + " " + transcript;
 		}
 	};
   
