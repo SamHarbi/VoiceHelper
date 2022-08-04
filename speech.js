@@ -56,6 +56,21 @@ function runSpeechRecognition() {
 				copyButton();
 				alert("Text Copied")
 			}
+			else if(transcript.includes("paste"))
+			{
+				pasteButton();
+				alert("Text Pasted")
+			}
+			else if(transcript.includes("clear"))
+			{
+				clearText();
+				alert("Text Cleared")
+			}
+			else if(transcript.includes("read"))
+			{
+				speakText();
+				alert("Reading Text")
+			}
 		}
 	};
   
