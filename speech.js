@@ -20,13 +20,13 @@ function runSpeechRecognition() {
 
 	recognition.interimResults = true;
 
-	//These are the words thaat will activate some function
-	const keywords = 
-		['VH','v'];
+	//These are the words thaat will activate some function- These don't do anything
+	//const keywords = 
+		//['VH','v'];
 	
-	const grammar = `#JSGF V1.0; grammar keywords; public <keywords> = ${keywords.join(' | ')};`
-	speechRecognitionList.addFromString(grammar, 1);
-	recognition.grammars = speechRecognitionList;
+	//const grammar = `#JSGF V1.0; grammar keywords; public <keywords> = ${keywords.join(' | ')};`
+	//speechRecognitionList.addFromString(grammar, 1);
+	//recognition.grammars = speechRecognitionList;
 	recognition.maxAlternatives = 1;
 
 	preTalk = output.innerHTML
@@ -66,7 +66,7 @@ function runSpeechRecognition() {
 				clearText();
 				alert("Text Cleared")
 			}
-			else if(transcript.includes("read"))
+			else if(transcript.includes("read") || transcript.includes("speak"))
 			{
 				speakText();
 				alert("Reading Text")
