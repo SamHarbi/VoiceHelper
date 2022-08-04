@@ -15,10 +15,8 @@
 
 <body>
     <main class="container">
-
         <div class="grid">
             <div>
-
                 <h1 id="inlineE">
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
@@ -27,21 +25,29 @@
                     </span> 
                 Voice Helper</h1>
 
-                <p>Insert some info on the page here</p>
+                <h3>About</h3>
+                <p>Voice Helper is an experimental Hackathon Submission that aims to increase accessibility to technology among those who have problems using traditional input methods. In the case of this prototype, it is 
+                    Keyboards for typing tasks. </p>
 
-                <p>Note: Speech Recognition only works with Chrome Browsers and likely other Chromium based Browsers</p>
+                <p>Note: Speech Recognition only works with Chrome Browsers and likely other Chromium based Browsers- This also includes Android Devices.</p>
 
-                <p><strong>A Lloyds Bank Hackathon Project made in ~1 day</strong> | Written by Sameer Al Harbi with Conceptual Help from {Insert Everyone's name here}</p>
+                <p><strong>A Lloyds Bank Hackathon Project made in ~1 day</strong> | Team Project done by Sameer Al Harbi, Ahmed Lawal, Olanrewaju Akinola, Aheed Ibrahim, Helen Bourne, Samuel Cudjoe and Mojisola Jeje</p>
 
             </div>
             <div>
                 <br>
                 <article>
-                    
-                    
 
                     <article id="copyForm" contenteditable></article>
-                    <button onclick="copyButton()">Copy Text</button>
+                    <button onclick="copyButton()" id="copyButtonTag">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                          </svg>
+                        Copy Text
+                    
+                    </button>
 
                     <button role="button" onclick="runSpeechRecognition()">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">

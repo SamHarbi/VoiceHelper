@@ -35,6 +35,10 @@ function runSpeechRecognition() {
 }
 
 function copyButton() {
-	copydata = document.getElementById("copyForm")
+	copydata = document.getElementById("copyForm");
+	copyButton = document.getElementById("copyButtonTag");
+
+	copyButton.innerHTML = "Copied!"
+
 	navigator.clipboard.writeText(copydata.innerHTML);
 }
