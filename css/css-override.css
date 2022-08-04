@@ -9,11 +9,11 @@ h1{
 }
 
 #record{
-    background-color: #b4202a;
-    border: #b4202a;
-}
-
-#read{
     background-color: green;
     border: green;
 }
+
+small{
+    color: green;
+}
+

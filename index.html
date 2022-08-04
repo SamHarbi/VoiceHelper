@@ -30,7 +30,8 @@
                     Keyboards for typing tasks. </p>
 
                 <p>Note: Speech Recognition only works with Chrome Browsers and likely other Chromium based Browsers- This also includes Android Devices.</p>
-
+                
+                <h3>Credits</h3>
                 <p><strong>A Lloyds Bank Hackathon Project made in ~1 day</strong> | Team Project done by Sameer Al Harbi, Ahmed Lawal, Olanrewaju Akinola, Aheed Ibrahim, Helen Bourne, Samuel Cudjoe and Mojisola Jeje</p>
 
             </div>
@@ -39,6 +40,8 @@
                 <article>
 
                     <article id="copyForm" contenteditable></article><!--Untrusted Data, Need to protect against XSS-->
+
+                    <button role="button" onclick="clearText()" class="outline">Clear Text</button>
 
                     <div class="grid">
                         <div>
@@ -62,6 +65,7 @@
                         </div>
                     </div>
                     
+                    <button role="button" onclick="speakText()" class="outline">Read Text</button>
 
                     <button role="button" onclick="runSpeechRecognition()" id="record">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
@@ -72,8 +76,6 @@
                      Start Recording
     
                     </button>
-
-                    <button role="button" onclick="speakText()" id="read">Read Text</button>
 
                 </article>
     
