@@ -42,3 +42,18 @@ function copyButton() {
 
 	navigator.clipboard.writeText(copydata.innerHTML);
 }
+
+function pasteButton(){
+
+	copydata = document.getElementById("copyForm");
+	navigator.clipboard.readText().then(
+		(clipText) => copydata.innerHTML = ""+clipText);
+}
+
+function speakText() {
+
+	var text = new SpeechSynthesisUtterance();
+	text.text = document.getElementById("copyForm").innerHTML;
+	window.speechSynthesis.speak(text);
+
+}
