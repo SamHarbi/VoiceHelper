@@ -14,11 +14,11 @@ function runSpeechRecognition() {
 	var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 	const SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 	const SpeechGrammarList = window.SpeechGrammarList || webkitSpeechGrammarList;
+	
 
 	var recognition = new SpeechRecognition();
-	const speechRecognitionList = new SpeechGrammarList();
 
-	recognition.interimResults = true;
+	recognition.lang = 'en-US';
 
 	//These are the words thaat will activate some function- These don't do anything
 	//const keywords = 
@@ -46,10 +46,10 @@ function runSpeechRecognition() {
 	recognition.onresult = function(event) {
 		var transcript = event.results[0][0].transcript;
 		var confidence = event.results[0][0].confidence;
-		output.innerHTML = preTalk + " " + transcript;
+		output.innerHTML = preTalk;
 		output.classList.remove("hide");
 		
-		if(transcript.includes("VH"))
+		if(transcript.includes("command") || transcript.includes("VH"))
 		{
 			if(transcript.includes("copy"))
 			{
@@ -71,6 +71,10 @@ function runSpeechRecognition() {
 				speakText();
 				alert("Reading Text")
 			}
+		}
+		else
+		{
+			output.innerHTML = " " + transcript;
 		}
 	};
   
